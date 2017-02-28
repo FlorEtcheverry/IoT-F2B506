@@ -1,5 +1,6 @@
-import org.cybergarage.upnp.*;
-import org.cybergarage.upnp.device.*;
+package application;
+
+import ctrlpoint.*;
 
 public class Server {
 
