@@ -1,17 +1,28 @@
 import org.cybergarage.upnp.*;
 import org.cybergarage.upnp.device.*;
+import org.cybergarage.upnp.event.EventListener;
 import org.cybergarage.upnp.ssdp.SSDPPacket;
 
 
-public class MyCtrlPoint extends ControlPoint implements NotifyListener {
+public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventListener {
 	
 	private Device limsiSpeech = null;
-
+	private String limsiSpeechUuid = null;
+	
 	public MyCtrlPoint() {		
 		addNotifyListener(this);
 		start();
 	}
-	
+
+	@Override
+	public void eventNotifyReceived(String uuid, long seq, String varName, String value) {
+		System.out.println("Event from: uuid " + uuid);
+		
+		if (uuid.equals(limsiSpeechUuid)) {
+			
+		}
+	}
+
 	public void deviceNotifyReceived(SSDPPacket ssdpPacket) {
 		String uuid = ssdpPacket.getUSN();
 		String target = ssdpPacket.getNT();
@@ -28,10 +39,22 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener {
 		for (int n = 0; n < nRootDevs; n++) {
 			Device dev = rootDevList.getDevice(n);
 			String devName = dev.getFriendlyName();
-			System.out.println("[" + n + "] = " + devName);	
+			//System.out.println("[" + n + "] = " + devName);	
 			if (devName.equals("LIMSI Speech") && limsiSpeech == null) {				
 				limsiSpeech = dev;
-				saySomething("Hello this is LIMSI Speech");
+				limsiSpeechUuid = limsiSpeech.getSSDPPacket().getUSN();
+				Service service = limsiSpeech.getService("urn:schemas-upnp-org:serviceId:1");
+				
+				if (service != null) {
+					boolean res = subscribe(service);
+					if (res) {
+						System.out.println("Subscribed");
+					} else {
+						System.out.println("Subscribe Failed");
+					}
+				}			
+				
+				saySomething("Bonjour je suis LIMSI Speech");
 			}
 			//printServices(dev);
 		}
