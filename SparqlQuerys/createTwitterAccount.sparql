@@ -1,0 +1,29 @@
+#File: createTwitterAccount -- creates the twitterData for the user
+#Parameter: User -- the consumerKey user data of the person  -- String -- M
+#Parameter: consumerKey -- the consumerKey user data of the person  -- String -- M
+#Parameter: consumerSecret -- the consumerSecret user data of the person  -- String -- M
+#Parameter: accessToken -- the accessToken user data of the person  -- String -- M
+#Parameter: accesTokenSecret -- the accesTokenSecret user data of the person  -- String -- M
+
+
+PREFIX :<http://www.jaatadia.org/IMT/UV2B506Gr2.owl#>
+PREFIX base:<http://www.jaatadia.org/IMT/UV2B506Gr2.owl/Individuals#>
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX foaf:<http://xmlns.com/foaf/0.1/>
+
+INSERT {
+	?account a :twitter.
+	base:%%User%% foaf:holdsAccount ?account.
+	?account :consumerSecret base:%%consumerSecret%%.
+	?account :accessToken base:%%accessToken%%.
+	?account :accesTokenSecret base:%%accesTokenSecret%%.
+	?account :consumerKey base:%%consumerKey%%.
+}WHERE {
+	BIND ( NOW() as ?now )
+	BIND ( IRI(CONCAT("base:%%User%%-twitter-", STR(?now))) as ?account)
+
+}

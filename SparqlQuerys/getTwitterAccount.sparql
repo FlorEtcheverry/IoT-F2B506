@@ -2,8 +2,8 @@
 #Parameter: User -- the twtiter user data of the person  -- String -- M
 
 
-PREFIX :"http://www.jaatadia.org/IMT/UV2B506Gr2.owl#>
-PREFIX base:"http://www.jaatadia.org/IMT/UV2B506Gr2.owl/Individuals#>
+PREFIX :<http://www.jaatadia.org/IMT/UV2B506Gr2.owl#>
+PREFIX base:<http://www.jaatadia.org/IMT/UV2B506Gr2.owl/Individuals#>
 
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
