@@ -1,5 +1,6 @@
 package admin;
 
+
 import java.net.MalformedURLException;
 import java.util.LinkedList;
 import java.util.List;
@@ -9,9 +10,9 @@ import org.imt.atlantique.sss.kms.connectors.ws.InterruptedException_Exception;
 import org.imt.atlantique.sss.kms.connectors.ws.RequestInvocationException_Exception;
 import org.jaatadia.soap_interaction.RequestManager;
 import org.jaatadia.soap_interaction.RequestWrapper;
+import org.jaatadia.soap_interaction.ResultWrapper;
 
 import data.SocialData;
-import sss.atlantique.imt.kms.RequestResult;
 
 
 public class TestingSuite {
@@ -74,7 +75,8 @@ public class TestingSuite {
 		
 		for (RequestWrapper r : req){
 			System.out.println(r.toString());
-			RequestManager.printRes(reqM.invokeRead(r));
+			ResultWrapper res = reqM.invokeRead(r);
+			System.out.println(res.toString());
 		}
 		
 	}
