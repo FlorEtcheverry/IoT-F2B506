@@ -1,5 +1,6 @@
-#File: getPoints -- creates the twitterData for the user
-#Parameter: User -- the consumerKey user data of the person  -- String -- M
+#File: createRound -- [PLACEHOLDER]
+#Parameter: User -- [PLACEHOLDER] -- String -- M
+#Parameter: Day -- [PLACEHOLDER] -- String -- M
 
 PREFIX :<http://www.jaatadia.org/IMT/UV2B506Gr2.owl#>
 PREFIX base:<http://www.jaatadia.org/IMT/UV2B506Gr2.owl/Individuals#>
@@ -10,12 +11,12 @@ PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
 PREFIX xml: <http://www.w3.org/XML/1998/namespace>
 PREFIX foaf:<http://xmlns.com/foaf/0.1/>
 
-Select ?reason ?points 
-
-WHERE {
-	base:%%User%% :inPersonRound ?round.
-	?round :hasPoints ?point.
-	?point :hasPointsValue ?points.
-	?point :hasPointReason ?reason.
+INSERT {
+		?round a :PersonRound.
+		base:%%User%% :inPersonRound ?round.
+		?round :hasDay "%%Day%%"^^xsd:string.
+}WHERE {
+	BIND ( NOW() as ?now )
+	BIND ( IRI(CONCAT("base:round-", STR(?now))) as ?round)
 
 }

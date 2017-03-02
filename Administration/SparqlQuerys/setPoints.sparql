@@ -23,7 +23,5 @@ INSERT {
 }WHERE {
 	BIND ( NOW() as ?now )
 	BIND ( IRI(CONCAT("base:%%User%%-point-", STR(?now))) as ?point)
-	base:%%User%% :inRound ?round.
-
-
+	base:%%User%% :inPersonRound ?round.
 }
