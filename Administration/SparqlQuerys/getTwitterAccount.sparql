@@ -1,5 +1,5 @@
 #File: getTwitterAccount -- returns the twitterData for the user
-#Parameter: User -- [PLACEHOLDER]  -- String -- M
+#Parameter: User -- [PLACEHOLDER] -- String -- M
 
 
 PREFIX :<http://www.jaatadia.org/IMT/UV2B506Gr2.owl#>
