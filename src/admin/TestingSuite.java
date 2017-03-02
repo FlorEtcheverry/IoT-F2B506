@@ -17,11 +17,11 @@ import data.SocialData;
 
 public class TestingSuite {
 	
-	
-	static void Main(String[] argv){
+	public static void main(String[] args)
+	{
 		try {
 			TestingSuite t = new TestingSuite();
-			t.init();
+			//t.init();
 			t.test();
 		} catch (MalformedURLException | ExecutionException_Exception | InterruptedException_Exception | RequestInvocationException_Exception e) {
 			e.printStackTrace();
@@ -46,11 +46,12 @@ public class TestingSuite {
 		req.add(new RequestWrapper("IoTF2B506Project","createDrug").add("Drug","tafirol"));
 		req.add(new RequestWrapper("IoTF2B506Project","createPerson").add("User","mark").add("Circle", "circle1"));
 		req.add(new RequestWrapper("IoTF2B506Project","createTwitterAccount").add("User","mark")
-				.add("consumerKey", "")
-				.add("consumerSecret", "")
-				.add("accessToken", "")
-				.add("accesTokenSecret", "")
+				.add("consumerKey", "Mkk45UT7QhzPcoM60cig1v2eh")
+				.add("consumerSecret", "T90sL0GDEHADIhQMY0cIHgWrMEpcJ6D7r7Oi6tbmEBp1fWIcfq")
+				.add("accessToken", "836144014906769413-8EX98FPfTsthPT07vTZ2EsKuQnYxnLZ")
+				.add("accesTokenSecret", "Ap7nTFF0WFmcnCXoFx5TtFmeLM49mdZUmNviDc9TCC20n")
 		);
+		
 		req.add(new RequestWrapper("IoTF2B506Project","createPrescription").add("User","Mark").add("Prescription","pmark1").add("Drug", "tafirol").add("Day","Sun").add("Hour","22-00-00"));
 		
 		System.out.println("Initialsing");
@@ -68,7 +69,7 @@ public class TestingSuite {
 		System.out.println(sd.getAccessTokenSecret());
 		System.out.println(sd.getconsumerSecret());
 		System.out.println(sd.getConsumerKey());
-		
+		/*
 		List<RequestWrapper> req = new LinkedList<RequestWrapper>();
 		req.add(new RequestWrapper("IoTF2B506Project","getPrescriptions").add("User","Mark"));
 		req.add(new RequestWrapper("IoTF2B506Project","getPoints").add("User","Mark"));
@@ -77,7 +78,9 @@ public class TestingSuite {
 			System.out.println(r.toString());
 			ResultWrapper res = reqM.invokeRead(r);
 			System.out.println(res.toString());
-		}
+		}*/
 		
 	}
+
+
 }

@@ -4,8 +4,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="lib/twitter4j-core-4.0.4.jar"/>
 	<classpathentry kind="lib" path="lib/clink170.jar"/>
-	<classpathentry kind="lib" path="SoapInteractionV1.0.jar"/>
-	<classpathentry kind="lib" path="SoapInteractionV1.01.jar"/>
 	<classpathentry kind="lib" path="src/SoapInteractionV1.01.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
