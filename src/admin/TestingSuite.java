@@ -22,14 +22,13 @@ public class TestingSuite {
 		try {
 			TestingSuite t = new TestingSuite();
 			//t.init();
+			t.points();
 			t.test();
 		} catch (MalformedURLException | ExecutionException_Exception | InterruptedException_Exception | RequestInvocationException_Exception e) {
 			e.printStackTrace();
 		}
 	}
 	
-	
-
 
 
 	private SocialData sd;
@@ -54,12 +53,27 @@ public class TestingSuite {
 		
 		req.add(new RequestWrapper("IoTF2B506Project","createPrescription").add("User","Mark").add("Prescription","pmark1").add("Drug", "tafirol").add("Day","Sun").add("Hour","22-00-00"));
 		
+		
+		req.add(new RequestWrapper("IoTF2B506Project","createRound").add("User","Mark").add("Day","Sun"));
+		
 		System.out.println("Initialsing");
 		for (RequestWrapper r : req){
 			System.out.println(r.toString());
 			reqM.invokeCreate(r);
 		}
 		
+	}
+	
+
+	private void points() throws ExecutionException_Exception, InterruptedException_Exception, RequestInvocationException_Exception {
+		List<RequestWrapper> req = new LinkedList<RequestWrapper>();
+		req.add(new RequestWrapper("IoTF2B506Project","setPoints").add("User","Mark").add("Points", "1000").add("Reason","BonusPoint"));
+		req.add(new RequestWrapper("IoTF2B506Project","setPoints").add("User","Mark").add("Points", "500").add("Reason","BonusPoint"));
+		
+		for (RequestWrapper r : req){
+			System.out.println(r.toString());
+			reqM.invokeCreate(r);
+		}
 	}
 	
 	public void test() throws ExecutionException_Exception, InterruptedException_Exception, RequestInvocationException_Exception{
@@ -69,7 +83,7 @@ public class TestingSuite {
 		System.out.println(sd.getAccessTokenSecret());
 		System.out.println(sd.getconsumerSecret());
 		System.out.println(sd.getConsumerKey());
-		/*
+		
 		List<RequestWrapper> req = new LinkedList<RequestWrapper>();
 		req.add(new RequestWrapper("IoTF2B506Project","getPrescriptions").add("User","Mark"));
 		req.add(new RequestWrapper("IoTF2B506Project","getPoints").add("User","Mark"));
@@ -78,7 +92,7 @@ public class TestingSuite {
 			System.out.println(r.toString());
 			ResultWrapper res = reqM.invokeRead(r);
 			System.out.println(res.toString());
-		}*/
+		}
 		
 	}
 
