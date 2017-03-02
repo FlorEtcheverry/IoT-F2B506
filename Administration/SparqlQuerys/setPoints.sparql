@@ -1,5 +1,5 @@
 #File: setPoints -- [placeHolder]
-#Parameter: User -- the consumerKey user data of the person  -- String -- M
+#Parameter: User -- [placeHolder]  -- String -- M
 #Parameter: Points -- [placeHolder]  -- String -- M
 #Parameter: Reason -- [placeHolder]  -- String -- M
 

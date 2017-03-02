@@ -1,5 +1,5 @@
-#File: getPoints -- creates the twitterData for the user
-#Parameter: User -- the consumerKey user data of the person  -- String -- M
+#File: getPoints -- [placeHolder]
+#Parameter: User -- [placeHolder]  -- String -- M
 
 PREFIX :<http://www.jaatadia.org/IMT/UV2B506Gr2.owl#>
 PREFIX base:<http://www.jaatadia.org/IMT/UV2B506Gr2.owl/Individuals#>

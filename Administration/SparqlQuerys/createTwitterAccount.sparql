@@ -1,9 +1,9 @@
 #File: createTwitterAccount -- creates the twitterData for the user
-#Parameter: User -- the consumerKey user data of the person  -- String -- M
-#Parameter: consumerKey -- the consumerKey user data of the person  -- String -- M
-#Parameter: consumerSecret -- the consumerSecret user data of the person  -- String -- M
-#Parameter: accessToken -- the accessToken user data of the person  -- String -- M
-#Parameter: accesTokenSecret -- the accesTokenSecret user data of the person  -- String -- M
+#Parameter: User -- [placeHolder]  -- String -- M
+#Parameter: consumerKey -- [placeHolder]  -- String -- M
+#Parameter: consumerSecret -- [placeHolder]  -- String -- M
+#Parameter: accessToken -- [placeHolder]  -- String -- M
+#Parameter: accesTokenSecret -- [placeHolder]  -- String -- M
 
 
 PREFIX :<http://www.jaatadia.org/IMT/UV2B506Gr2.owl#>
