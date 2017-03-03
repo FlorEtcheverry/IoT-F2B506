@@ -29,9 +29,8 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 		String uuid = ssdpPacket.getUSN();
 		String target = ssdpPacket.getNT();
 		String subType = ssdpPacket.getNTS();
-		String location = ssdpPacket.getLocation();
+		String location = ssdpPacket.getLocation();		
 		
-		System.out.println("MyCtrlPoint.deviceNotifyReceived()");		
 		printDevices();
 	}
 	
@@ -44,6 +43,7 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 			//System.out.println("[" + n + "] = " + devName);	
 			if (devName.equals("LIMSI Speech") && limsiSpeech == null) {				
 				limsiSpeech = dev;
+				
 				limsiSpeechUuid = limsiSpeech.getSSDPPacket().getUSN();
 				Service service = limsiSpeech.getService("urn:schemas-upnp-org:serviceId:1");
 				
@@ -56,7 +56,7 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 					}
 				}			
 				
-				saySomething("Bonjour je suis LIMSI Speech");
+				saySomething("LIMSI Speech est prêt.");
 			}
 			//printServices(dev);
 		}
@@ -101,5 +101,9 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 				String value = outArg.getValue();
 			}*/
 		}
+	}
+	
+	public boolean isLimsiSpeechready() {
+		return (limsiSpeech != null);
 	}
 }
