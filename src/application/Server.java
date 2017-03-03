@@ -47,7 +47,7 @@ public class Server {
 		markUser.setPoints(Integer.parseInt(res.toString()));
 		
 		// Wait until LIMSI Speech is ready
-		while (!ctrlPoint.isLimsiSpeechready()) {}
+		while (!ctrlPoint.isLimsiSpeechready() || !ctrlPoint.isRFIDready()) {}
 		
 		// Announce prescription
 		ctrlPoint.saySomething("Bonjour " + markUser.getName() + ", c'est l'heure de prendre votre " 
@@ -57,7 +57,7 @@ public class Server {
 		
 		
 		// Confirmation
-		//ctrlPoint.saySomething("C’est la bonne boîte, vous pouvez prendre votre dose habituelle");
+		//ctrlPoint.saySomething("CæŠst la bonne boé¡ƒe, vous pouvez prendre votre dose habituelle");
 		
 		// RFID event: box put back
 		
@@ -68,7 +68,7 @@ public class Server {
 		// TODO : Update database
 		
 		// Final announcement
-		//ctrlPoint.saySomething("Très bien " + markUser.getName() + ". Vous avez gagné " + newPoints + " points. A demain !");
+		//ctrlPoint.saySomething("Tré‘£ bien " + markUser.getName() + ". Vous avez gagnï¿½ " + newPoints + " points. A demain !");
 	
 		// Send tweet
 		//social.sendMedicationTookOnTime(markUser.getPrescription(), newPoints);
