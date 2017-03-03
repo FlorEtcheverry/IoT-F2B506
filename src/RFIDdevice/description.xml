@@ -1,0 +1,39 @@
+<?xml version="1.0" ?> 
+<root xmlns="urn:schemas-upnp-org:device-1-0">
+	<specVersion>
+		<major>1</major> 
+		<minor>0</minor> 
+	</specVersion>
+	<device>
+		<deviceType>urn:schemas-upnp-org:device:rfid:1</deviceType> 
+		<friendlyName>IoT_G2 RFID Device</friendlyName> 
+		<manufacturer>IoT_G2</manufacturer> 
+		<manufacturerURL>http://www.cybergarage.org</manufacturerURL> 
+		<modelDescription>IoT_G2_UPnP RFID Device</modelDescription> 
+		<modelName>RFID</modelName> 
+		<modelNumber>1.0</modelNumber> 
+		<modelURL>http://www.cybergarage.org</modelURL> 
+		<serialNumber>1234567890</serialNumber> 
+		<UDN>uuid:cybergarageRFIDDevice</UDN> 
+		<UPC>123456789012</UPC> 
+		<iconList>
+			<icon>
+				<mimetype>image/gif</mimetype> 
+				<width>48</width> 
+				<height>32</height> 
+				<depth>8</depth> 
+				<url>icon.gif</url> 
+			</icon>
+		</iconList>
+		<serviceList>
+			<service>
+				<serviceType>urn:schemas-upnp-org:service:rfid_detection:1</serviceType> 
+				<serviceId>urn:schemas-upnp-org:serviceId:rfid_detection</serviceId> 
+				<SCPDURL>/service/rfid_detection/description.xml</SCPDURL> 
+				<controlURL>/service/rfid_detection/control</controlURL> 
+				<eventSubURL>/service/rfid_detection/eventSub</eventSubURL> 
+			</service>
+		</serviceList>
+		<presentationURL>/presentation</presentationURL> 
+	</device>
+</root>
