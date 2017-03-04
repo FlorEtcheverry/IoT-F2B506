@@ -1,0 +1,790 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#"
+     xml:base="http://www.jaatadia.org/IMT/UV2B506Gr2.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:UV2B506Gr2="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#"
+     xmlns:tbcgeo="http://www.topbraidcomposer.org/owl/2006/07/tbcgeo.owl#"
+     xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl">
+        <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLDataProperty_11224bb6_0155_4827_b759_86c98b68ff99 -->
+
+    <owl:AnnotationProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLDataProperty_11224bb6_0155_4827_b759_86c98b68ff99"/>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLDataProperty_123c9c57_09bf_49cd_82ec_4e08ee8bb629 -->
+
+    <owl:AnnotationProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLDataProperty_123c9c57_09bf_49cd_82ec_4e08ee8bb629"/>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLDataProperty_6300c470_8353_4aa8_bc7e_df9a3ef0f767 -->
+
+    <owl:AnnotationProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLDataProperty_6300c470_8353_4aa8_bc7e_df9a3ef0f767"/>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLDataProperty_737bc785_3bb3_4e75_abf0_03434fc76025 -->
+
+    <owl:AnnotationProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLDataProperty_737bc785_3bb3_4e75_abf0_03434fc76025"/>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLDataProperty_7fbea513_c64a_4242_be38_ab355358a94b -->
+
+    <owl:AnnotationProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLDataProperty_7fbea513_c64a_4242_be38_ab355358a94b"/>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLDataProperty_854e31d3_4f34_4d5f_9a2c_31014e47982f -->
+
+    <owl:AnnotationProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLDataProperty_854e31d3_4f34_4d5f_9a2c_31014e47982f"/>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLDataProperty_9bd67e13_41aa_48c0_bcb5_f5315796d5df -->
+
+    <owl:AnnotationProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLDataProperty_9bd67e13_41aa_48c0_bcb5_f5315796d5df"/>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLDataProperty_acfcaf26_1cfc_4908_a557_0aaee7f29dc7 -->
+
+    <owl:AnnotationProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLDataProperty_acfcaf26_1cfc_4908_a557_0aaee7f29dc7"/>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLDataProperty_bf3b9e57_17de_4b48_a53e_8d545c051022 -->
+
+    <owl:AnnotationProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLDataProperty_bf3b9e57_17de_4b48_a53e_8d545c051022"/>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLDataProperty_c7593e0a_dc48_4e6a_8840_41bf1cd963f9 -->
+
+    <owl:AnnotationProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLDataProperty_c7593e0a_dc48_4e6a_8840_41bf1cd963f9"/>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLDataProperty_d59e5fc6_2217_49a5_be84_dc65a0eea6f7 -->
+
+    <owl:AnnotationProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLDataProperty_d59e5fc6_2217_49a5_be84_dc65a0eea6f7"/>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLDataProperty_f0c155b1_e125_4056_ba99_eeaafca68334 -->
+
+    <owl:AnnotationProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLDataProperty_f0c155b1_e125_4056_ba99_eeaafca68334"/>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLDataProperty_f671c332_40e8_4120_b3e0_b063f1fa9a80 -->
+
+    <owl:AnnotationProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLDataProperty_f671c332_40e8_4120_b3e0_b063f1fa9a80"/>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLObjectProperty_039c3bd5_a6ed_4210_a33d_c4853eafd6e5 -->
+
+    <owl:AnnotationProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLObjectProperty_039c3bd5_a6ed_4210_a33d_c4853eafd6e5"/>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLObjectProperty_20f1ed6a_5545_42b6_b02c_d858dcb6a19c -->
+
+    <owl:AnnotationProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLObjectProperty_20f1ed6a_5545_42b6_b02c_d858dcb6a19c"/>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLObjectProperty_670be156_177b_4e21_bc27_87a6931fc7a0 -->
+
+    <owl:AnnotationProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLObjectProperty_670be156_177b_4e21_bc27_87a6931fc7a0"/>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLObjectProperty_7265f442_b2c6_4697_9922_bd9adf20e80e -->
+
+    <owl:AnnotationProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLObjectProperty_7265f442_b2c6_4697_9922_bd9adf20e80e"/>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLObjectProperty_f9d716da_48e5_41cc_b460_2d224eb4464e -->
+
+    <owl:AnnotationProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLObjectProperty_f9d716da_48e5_41cc_b460_2d224eb4464e"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#time -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#time"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#CircleMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#CircleMember">
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/member"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Circle"/>
+        <rdfs:comment>The circle to which the person belongs</rdfs:comment>
+        <rdfs:label>Circle Member</rdfs:label>
+        <vs:term_status>stable</vs:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#compsedOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#compsedOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Round"/>
+        <rdfs:range rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Round"/>
+        <rdfs:label xml:lang="en">composedOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#hasMedicament -->
+
+    <owl:ObjectProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#hasMedicament">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Presciption"/>
+        <rdfs:range rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Medicament"/>
+        <rdfs:label xml:lang="en">hasMedicament</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#hasPoints -->
+
+    <owl:ObjectProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#hasPoints">
+        <rdfs:domain rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Round"/>
+        <rdfs:range rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Points"/>
+        <rdfs:label xml:lang="en">hasPoints</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#hasPrescription -->
+
+    <owl:ObjectProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#hasPrescription">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Presciption"/>
+        <rdfs:label xml:lang="en">hasPrescription</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#inCircleRound -->
+
+    <owl:ObjectProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#inCircleRound">
+        <rdfs:subPropertyOf rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#inRound"/>
+        <rdfs:domain rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Circle"/>
+        <rdfs:range rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owlCircleRound"/>
+        <rdfs:label xml:lang="en">inCircleRound</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#inPersonRound -->
+
+    <owl:ObjectProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#inPersonRound">
+        <rdfs:subPropertyOf rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#inRound"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#PersonRound"/>
+        <rdfs:label xml:lang="en">inPersonRound</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#inRound -->
+
+    <owl:ObjectProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#inRound">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Round"/>
+        <rdfs:label xml:lang="en">inRound</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#roundFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#roundFrom">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Round"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:label xml:lang="en">roundFrom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#accessToken -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#accessToken">
+        <rdfs:subPropertyOf rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#accountProperties"/>
+        <rdfs:label xml:lang="en">accessToken</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#accessTokenSecret -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#accessTokenSecret">
+        <rdfs:subPropertyOf rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#accountProperties"/>
+        <rdfs:label xml:lang="en">accessTokenSecret</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#accountProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#accountProperties">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+        <rdfs:label xml:lang="en">accountProperties</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#consumerKey -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#consumerKey">
+        <rdfs:subPropertyOf rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#accountProperties"/>
+        <rdfs:label xml:lang="en">consumerKey</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#consumerSecret -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#consumerSecret">
+        <rdfs:subPropertyOf rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#accountProperties"/>
+        <rdfs:label xml:lang="en">consumerSecret</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#eventProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#eventProperties">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:label xml:lang="en">eventProperties</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#hasDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#hasDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#eventProperties"/>
+        <rdfs:domain rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:label xml:lang="en">hasDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#hasDay -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#hasDay">
+        <rdfs:subPropertyOf rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#eventProperties"/>
+        <rdfs:domain rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">hasDay</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#hasDose -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#hasDose">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Presciption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">hasDose</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#hasHour -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#hasHour">
+        <rdfs:subPropertyOf rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#eventProperties"/>
+        <rdfs:domain rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+        <rdfs:label xml:lang="en">hasHour</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#hasId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#hasId">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Medicament"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">hasId</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#hasPointsReason -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#hasPointsReason">
+        <rdfs:subPropertyOf rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#pointsProperties"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">hasPointsReason</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#hasPointsValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#hasPointsValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#pointsProperties"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label xml:lang="en">hasPointsValue</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#isActive -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#isActive">
+        <rdfs:subPropertyOf rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#eventProperties"/>
+        <rdfs:domain rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="en">isActive</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#password -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#password">
+        <rdfs:subPropertyOf rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#accountProperties"/>
+        <rdfs:label xml:lang="en">password</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#pointsProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#pointsProperties">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Points"/>
+        <rdfs:label xml:lang="en">pointsProperties</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#username -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#username">
+        <rdfs:subPropertyOf rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#accountProperties"/>
+        <rdfs:label xml:lang="en">username</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owlCircleRound -->
+
+    <owl:Class rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owlCircleRound">
+        <rdfs:subClassOf rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Round"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#compsedOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#PersonRound"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#roundFrom"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Circle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">CircleRound</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Circle -->
+
+    <owl:Class rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Circle">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Group"/>
+        <rdfs:comment>Basic agrouppation of people in the for a competition</rdfs:comment>
+        <rdfs:label>Circle</rdfs:label>
+        <vs:term_status>stable</vs:term_status>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Event -->
+
+    <owl:Class rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Event">
+        <rdfs:label xml:lang="en">Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#GameRound -->
+
+    <owl:Class rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#GameRound">
+        <rdfs:subClassOf rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Round"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#compsedOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owlCircleRound"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">GameRound</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Medicament -->
+
+    <owl:Class rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Medicament">
+        <rdfs:subClassOf rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Object"/>
+        <rdfs:label xml:lang="en">Medicament</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Object -->
+
+    <owl:Class rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Object">
+        <rdfs:label xml:lang="en">Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#PersonRound -->
+
+    <owl:Class rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#PersonRound">
+        <rdfs:subClassOf rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Round"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#roundFrom"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">PersonRound</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Points -->
+
+    <owl:Class rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Points">
+        <rdfs:subClassOf rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#hasPointsReason"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#hasPointsValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Points</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Presciption -->
+
+    <owl:Class rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Presciption">
+        <rdfs:subClassOf rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Event"/>
+        <rdfs:label xml:lang="en">Prescription</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Round -->
+
+    <owl:Class rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Round">
+        <rdfs:subClassOf rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Event"/>
+        <rdfs:label xml:lang="en">Round</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Twitter -->
+
+    <owl:Class rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Twitter">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/OnlineChatAccount"/>
+        <rdfs:label xml:lang="en">twitter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#CircleMember"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Circle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_1f9d8168_a15d_4b23_b745_c027dc0ba6ea -->
+
+    <owl:NamedIndividual rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_1f9d8168_a15d_4b23_b745_c027dc0ba6ea">
+        <rdf:type rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Circle"/>
+        <rdfs:label xml:lang="en">circle2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_2524ff81_6210_4bef_9a91_1b1da9189aaf -->
+
+    <owl:NamedIndividual rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_2524ff81_6210_4bef_9a91_1b1da9189aaf">
+        <rdf:type rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Presciption"/>
+        <OWLDataProperty_737bc785_3bb3_4e75_abf0_03434fc76025>3g</OWLDataProperty_737bc785_3bb3_4e75_abf0_03434fc76025>
+        <OWLDataProperty_7fbea513_c64a_4242_be38_ab355358a94b>Mon</OWLDataProperty_7fbea513_c64a_4242_be38_ab355358a94b>
+        <OWLDataProperty_bf3b9e57_17de_4b48_a53e_8d545c051022 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</OWLDataProperty_bf3b9e57_17de_4b48_a53e_8d545c051022>
+        <OWLDataProperty_c7593e0a_dc48_4e6a_8840_41bf1cd963f9 rdf:datatype="http://www.w3.org/2001/XMLSchema#time">20-30-00</OWLDataProperty_c7593e0a_dc48_4e6a_8840_41bf1cd963f9>
+        <OWLDataProperty_c7593e0a_dc48_4e6a_8840_41bf1cd963f9 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</OWLDataProperty_c7593e0a_dc48_4e6a_8840_41bf1cd963f9>
+        <OWLObjectProperty_039c3bd5_a6ed_4210_a33d_c4853eafd6e5 rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_6957464b_2fcd_41a6_829e_febc0e0187e9"/>
+        <rdfs:label xml:lang="en">markPrescription</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_3889f039_b436_4892_8847_8baa173a1c87 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_3889f039_b436_4892_8847_8baa173a1c87">
+        <rdf:type rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Circle"/>
+        <OWLObjectProperty_7265f442_b2c6_4697_9922_bd9adf20e80e rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_9a4a1436_b201_4a97_a20e_e490736f4af4"/>
+        <rdfs:label xml:lang="en">circle1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_4543e7f7_2f82_48e3_bdf6_c80cd2c38b9c -->
+
+    <owl:NamedIndividual rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_4543e7f7_2f82_48e3_bdf6_c80cd2c38b9c">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <CircleMember rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_3889f039_b436_4892_8847_8baa173a1c87"/>
+        <foaf:holdsAccount rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_f279ee51_244b_4e65_8ec8_3c8ac042dddd"/>
+        <OWLObjectProperty_7265f442_b2c6_4697_9922_bd9adf20e80e rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_978f9481_54f3_4d96_8c26_bf9bb62b72af"/>
+        <rdfs:label xml:lang="en">mark</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_480a82ac_49ab_4dc0_93da_723adae7ee20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_480a82ac_49ab_4dc0_93da_723adae7ee20">
+        <rdf:type rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owlCircleRound"/>
+        <rdfs:label xml:lang="en">circle2round1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_59012123_7366_4c50_96b9_18c07e44cec3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_59012123_7366_4c50_96b9_18c07e44cec3">
+        <rdf:type rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Points"/>
+        <OWLDataProperty_6300c470_8353_4aa8_bc7e_df9a3ef0f767 rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1000</OWLDataProperty_6300c470_8353_4aa8_bc7e_df9a3ef0f767>
+        <OWLDataProperty_9bd67e13_41aa_48c0_bcb5_f5315796d5df rdf:datatype="http://www.w3.org/2001/XMLSchema#string">took tafirol on time</OWLDataProperty_9bd67e13_41aa_48c0_bcb5_f5315796d5df>
+        <rdfs:label xml:lang="en">markpointsRound1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_6957464b_2fcd_41a6_829e_febc0e0187e9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_6957464b_2fcd_41a6_829e_febc0e0187e9">
+        <rdf:type rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Medicament"/>
+        <OWLDataProperty_854e31d3_4f34_4d5f_9a2c_31014e47982f>I34564654</OWLDataProperty_854e31d3_4f34_4d5f_9a2c_31014e47982f>
+        <rdfs:label xml:lang="en">tafirol</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_84886fc9_0726_4528_84e1_441f68a55640 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_84886fc9_0726_4528_84e1_441f68a55640">
+        <rdf:type rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#GameRound"/>
+        <OWLObjectProperty_670be156_177b_4e21_bc27_87a6931fc7a0 rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_480a82ac_49ab_4dc0_93da_723adae7ee20"/>
+        <OWLObjectProperty_670be156_177b_4e21_bc27_87a6931fc7a0 rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_9a4a1436_b201_4a97_a20e_e490736f4af4"/>
+        <rdfs:label xml:lang="en">ground1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_978f9481_54f3_4d96_8c26_bf9bb62b72af -->
+
+    <owl:NamedIndividual rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_978f9481_54f3_4d96_8c26_bf9bb62b72af">
+        <rdf:type rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#PersonRound"/>
+        <OWLObjectProperty_20f1ed6a_5545_42b6_b02c_d858dcb6a19c rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_4543e7f7_2f82_48e3_bdf6_c80cd2c38b9c"/>
+        <OWLObjectProperty_f9d716da_48e5_41cc_b460_2d224eb4464e rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_59012123_7366_4c50_96b9_18c07e44cec3"/>
+        <rdfs:label xml:lang="en">markRound1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_9a4a1436_b201_4a97_a20e_e490736f4af4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_9a4a1436_b201_4a97_a20e_e490736f4af4">
+        <rdf:type rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owlCircleRound"/>
+        <OWLObjectProperty_20f1ed6a_5545_42b6_b02c_d858dcb6a19c rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_3889f039_b436_4892_8847_8baa173a1c87"/>
+        <OWLObjectProperty_670be156_177b_4e21_bc27_87a6931fc7a0 rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_978f9481_54f3_4d96_8c26_bf9bb62b72af"/>
+        <OWLObjectProperty_f9d716da_48e5_41cc_b460_2d224eb4464e rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_59012123_7366_4c50_96b9_18c07e44cec3"/>
+        <rdfs:label xml:lang="en">circle1Round1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_f279ee51_244b_4e65_8ec8_3c8ac042dddd -->
+
+    <owl:NamedIndividual rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_f279ee51_244b_4e65_8ec8_3c8ac042dddd">
+        <rdf:type rdf:resource="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Twitter"/>
+        <OWLDataProperty_11224bb6_0155_4827_b759_86c98b68ff99 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T90sL0GDEHADIhQMY0cIHgWrMEpcJ6D7r7Oi6tbmEBp1fWIcfq</OWLDataProperty_11224bb6_0155_4827_b759_86c98b68ff99>
+        <OWLDataProperty_123c9c57_09bf_49cd_82ec_4e08ee8bb629 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ap7nTFF0WFmcnCXoFx5TtFmeLM49mdZUmNviDc9TCC20n</OWLDataProperty_123c9c57_09bf_49cd_82ec_4e08ee8bb629>
+        <OWLDataProperty_acfcaf26_1cfc_4908_a557_0aaee7f29dc7 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">markmedicament</OWLDataProperty_acfcaf26_1cfc_4908_a557_0aaee7f29dc7>
+        <OWLDataProperty_d59e5fc6_2217_49a5_be84_dc65a0eea6f7 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MarkIoTMed</OWLDataProperty_d59e5fc6_2217_49a5_be84_dc65a0eea6f7>
+        <OWLDataProperty_f0c155b1_e125_4056_ba99_eeaafca68334 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">836144014906769413-8EX98FPfTsthPT07vTZ2EsKuQnYxnLZ</OWLDataProperty_f0c155b1_e125_4056_ba99_eeaafca68334>
+        <OWLDataProperty_f671c332_40e8_4120_b3e0_b063f1fa9a80 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mkk45UT7QhzPcoM60cig1v2eh</OWLDataProperty_f671c332_40e8_4120_b3e0_b063f1fa9a80>
+        <rdfs:label xml:lang="en">markTwitter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Event"/>
+            <rdf:Description rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#Object"/>
+            <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Agent"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_1f9d8168_a15d_4b23_b745_c027dc0ba6ea"/>
+            <rdf:Description rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#OWLNamedIndividual_3889f039_b436_4892_8847_8baa173a1c87"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#accessToken"/>
+            <rdf:Description rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#accessTokenSecret"/>
+            <rdf:Description rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#consumerKey"/>
+            <rdf:Description rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#consumerSecret"/>
+            <rdf:Description rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#password"/>
+            <rdf:Description rdf:about="http://www.jaatadia.org/IMT/UV2B506Gr2.owl#username"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+

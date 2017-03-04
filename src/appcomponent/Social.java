@@ -18,30 +18,30 @@ public class Social {
 	public Social() {
 	}
 	
-	void setAuthValues(String consumerKey, String consumerSecret, String accessToken, String accessTokenSecret) {
+	public void setAuthValues(String consumerKey, String consumerSecret, String accessToken, String accessTokenSecret) {
 		consumerKeyStr = consumerKey;
 		consumerSecretStr = consumerSecret;
 		accessTokenStr = accessToken;
 		accessTokenSecretStr = accessTokenSecret;
 	}
 	
-	boolean sendMedicationTookOnTime(String medName,int currentPoints) {
+	public boolean sendMedicationTookOnTime(String medName,int currentPoints) {
 		return sendTweet("I have taken my medication ("+medName+") within 30 minutes. Now I have "+currentPoints+" points.");
 	}
 
-	boolean sendMedicationTookOutOfTime(String medName, int currentPoints) {
+	public boolean sendMedicationTookOutOfTime(String medName, int currentPoints) {
 		return sendTweet("I have taken my medication ("+medName+") out of time (+/-30min). Now I have "+currentPoints+" points.");
 	}
 	
-	boolean sendMedicationTookDuplicated(String medName, int currentPoints) {
+	public boolean sendMedicationTookDuplicated(String medName, int currentPoints) {
 		return sendTweet("I have taken my medication ("+medName+") duplicated. Now I have "+currentPoints+" points.");
 	}
 	
-	boolean sendMedicationNonTaken(String medName, int currentPoints) {
+	public boolean sendMedicationNonTaken(String medName, int currentPoints) {
 		return sendTweet("I have not taken my medication ("+medName+"). Now I have "+currentPoints+" points.");
 	}
 
-	boolean sendMedicationFinished(String medName) {
+	public boolean sendMedicationFinished(String medName) {
 		return sendTweet("My medication ("+medName+") has finnished. Needs replacement.");
 	}
 	
