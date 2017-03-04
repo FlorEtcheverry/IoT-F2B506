@@ -73,7 +73,7 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 		System.out.println("value : " + value);
 		
 		// When we receive a user state change from RFID device
-		if ((varName == "rfidUserState") && (value != "")) {
+		if ((varName == "rfidState") && (value != "")) {
 			//split to get only user id
 			value = value.split("_")[0];
 			System.out.println("value : " + value);
@@ -164,7 +164,7 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 						System.out.print("Failed to subscribe with rfid service");
 				}			
 				
-				saySomething("RFID is ready.");
+				//saySomething("RFID is ready.");
 			}
 			
 			//printServices(dev);
@@ -239,7 +239,7 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 			e.printStackTrace();
 		}
 		//saySomething("Tres bien " + user.getName() + ". Vous avez gagne " + newPoints + " points. A demain !");
-		social.sendMedicationTookOnTime(user.getPrescription(),newPoints); 		
+		//social.sendMedicationTookOnTime(user.getPrescription(),newPoints); 		
 	}
 	
 	// Execute SPARQL requests to retrieve user information

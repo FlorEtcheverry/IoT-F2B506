@@ -54,7 +54,6 @@ public class TestingSuite {
 		);
 		
 		req.add(new RequestWrapper("IoTF2B506Project","createPrescription").add("User","Mark").add("Prescription","pmark1").add("Drug", "tafirol").add("Day","Sun").add("Hour","22:00:00"));
-		req.add(new RequestWrapper("IoTF2B506Project","createPrescription").add("User","Mark").add("Prescription","pmark1").add("Drug", "tafirol").add("Day","Sun").add("Hour","20:00:00"));
 		
 		
 		req.add(new RequestWrapper("IoTF2B506Project","createRound").add("User","Mark").add("Day","Sun"));
