@@ -21,7 +21,7 @@ public class TestingSuite {
 	{
 		try {
 			TestingSuite t = new TestingSuite();
-			//t.init();
+			t.init();
 			t.points();
 			t.test();
 		} catch (MalformedURLException | ExecutionException_Exception | InterruptedException_Exception | RequestInvocationException_Exception e) {
@@ -42,7 +42,9 @@ public class TestingSuite {
 	
 	private void init() throws ExecutionException_Exception, InterruptedException_Exception, RequestInvocationException_Exception {
 		List<RequestWrapper> req = new LinkedList<RequestWrapper>();
-		req.add(new RequestWrapper("IoTF2B506Project","createDrug").add("Drug","tafirol"));
+		req.add(new RequestWrapper("IoTF2B506Project","createDrug").add("Drug","tafirol").add("Id", "E3 A1 CC A5"));
+		req.add(new RequestWrapper("IoTF2B506Project","createDrug").add("Drug","salbutamol").add("Id", "44 5B 1E P8"));
+		
 		req.add(new RequestWrapper("IoTF2B506Project","createPerson").add("User","mark").add("Circle", "circle1"));
 		req.add(new RequestWrapper("IoTF2B506Project","createTwitterAccount").add("User","mark")
 				.add("consumerKey", "Mkk45UT7QhzPcoM60cig1v2eh")
@@ -51,7 +53,8 @@ public class TestingSuite {
 				.add("accesTokenSecret", "Ap7nTFF0WFmcnCXoFx5TtFmeLM49mdZUmNviDc9TCC20n")
 		);
 		
-		req.add(new RequestWrapper("IoTF2B506Project","createPrescription").add("User","Mark").add("Prescription","pmark1").add("Drug", "tafirol").add("Day","Sun").add("Hour","22-00-00"));
+		req.add(new RequestWrapper("IoTF2B506Project","createPrescription").add("User","Mark").add("Prescription","pmark1").add("Drug", "tafirol").add("Day","Sun").add("Hour","22:00:00"));
+		req.add(new RequestWrapper("IoTF2B506Project","createPrescription").add("User","Mark").add("Prescription","pmark1").add("Drug", "tafirol").add("Day","Sun").add("Hour","20:00:00"));
 		
 		
 		req.add(new RequestWrapper("IoTF2B506Project","createRound").add("User","Mark").add("Day","Sun"));
