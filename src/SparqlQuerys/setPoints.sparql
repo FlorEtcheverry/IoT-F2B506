@@ -17,7 +17,7 @@ INSERT {
 	
 	?point a :Points.
 	?round :hasPoints ?point.
-	?point :hasPointsValue "%%Points%%"^^xsd:int.
+	?point :hasPointsValue "%%Points%%"^^xsd:string.
 	?point :hasPointReason "%%Reason%%"^^xsd:string.
 
 }WHERE {

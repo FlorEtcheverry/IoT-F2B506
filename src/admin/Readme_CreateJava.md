@@ -10,7 +10,7 @@
 		<requests_path>: folder in which the requests are stored 
 
 	Example:
-		python create_java.py IoTF2B506Project ../Ontology/UV506Gr2.owl ./SparqlQuerys
+		python create_java.py IoTF2B506 ../Ontology/UV506Gr2.owl ./SparqlQuerys
 
 
 3. Requirements
