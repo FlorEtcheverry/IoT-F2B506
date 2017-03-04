@@ -3,6 +3,7 @@ package ctrlpoint;
 import application.*;
 import data.SocialData;
 import data.User;
+import sss.atlantique.imt.kms.RequestInvocation;
 
 import java.net.MalformedURLException;
 import java.util.LinkedList;
@@ -240,19 +241,22 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 		reqM = new RequestManager("http://192.168.223.129:8080/CrudService/CrudWS?WSDL");
 
 		List<RequestWrapper> req = new LinkedList<RequestWrapper>();
-		req.add(new RequestWrapper("IoTF2B506Project", "getPrescriptions").add("User", "Mark"));
-		req.add(new RequestWrapper("IoTF2B506Project", "getPoints").add("User", "Mark"));
+		RequestInvocation req1 = new RequestWrapper("IoTF2B506Project", "getPrescriptions").add("User", "Mark");
+		RequestInvocation req2 = new RequestWrapper("IoTF2B506Project", "getPoints").add("User", "Mark");
 		// TODO: request to retrieve medication RFID
 		//ctrlPoint.setMedicationRFID(medId);
 		
-		ResultWrapper res = reqM.invokeRead(req.get(0));
+		ResultWrapper res = reqM.invokeRead(req1);
 		user.setPrescription(res.getField("drug", 0).split("#")[1]);
-		user.setPoints(1000);
 		user.setPrescriptionId(res.getField("id", 0));
 		
+		res = reqM.invokeRead(req2);
+		int count=0;
+		for (int i=0;i<res.getSize();i++){
+			count += Integer.parseInt(res.getField("points", i));
+		}
 		
+		user.setPoints(count);
 		
-
-		res = reqM.invokeRead(req.get(1));
 		}
 }

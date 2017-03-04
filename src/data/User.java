@@ -25,6 +25,7 @@ public class User {
 	
 	public void setPoints(int points) {
 		this.points = points;
+		System.out.println("points: "+points);
 	}
 	
 	public void setPrescription(String prescription) {
