@@ -21,8 +21,8 @@ public class TestingSuite {
 	{
 		try {
 			TestingSuite t = new TestingSuite();
-			t.init();
-			t.points();
+			//t.init();
+			//t.points();
 			t.test();
 		} catch (MalformedURLException | ExecutionException_Exception | InterruptedException_Exception | RequestInvocationException_Exception e) {
 			e.printStackTrace();

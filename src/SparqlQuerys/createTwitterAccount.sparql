@@ -18,10 +18,10 @@ PREFIX foaf:<http://xmlns.com/foaf/0.1/>
 INSERT {
 	?account a :twitter.
 	base:%%User%% foaf:holdsAccount ?account.
-	?account :consumerSecret base:%%consumerSecret%%.
-	?account :accessToken base:%%accessToken%%.
-	?account :accesTokenSecret base:%%accesTokenSecret%%.
-	?account :consumerKey base:%%consumerKey%%.
+	?account :consumerSecret "%%consumerSecret%%"^^xsd:string.
+	?account :accessToken "%%accessToken%%"^^xsd:string.
+	?account :accesTokenSecret "%%accesTokenSecret%%"^^xsd:string.
+	?account :consumerKey "%%consumerKey%%"^^xsd:string.
 }WHERE {
 	BIND ( NOW() as ?now )
 	BIND ( IRI(CONCAT("base:%%User%%-twitter-", STR(?now))) as ?account)

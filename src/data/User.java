@@ -5,6 +5,7 @@ public class User {
 	private int points;
 	private String name;
 	private String prescription;
+	private String prescriptionId;
 	
 	public User(String name) {
 		this.name = name;
@@ -28,6 +29,14 @@ public class User {
 	
 	public void setPrescription(String prescription) {
 		this.prescription = prescription;
+	}
+	
+	public void setPrescriptionId(String prescriptionid) {
+		this.prescriptionId = prescriptionid;
+	}
+
+	public Object getPrescriptionId() {
+		return prescriptionId;
 	}
 	
 }

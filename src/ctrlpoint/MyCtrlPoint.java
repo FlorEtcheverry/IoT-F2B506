@@ -34,7 +34,7 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 	// RFID reader
 	private Device rfidDev = null;
 	// Current user that we handle, all other user ids will be ignored
-	private String currentId = "E3 A1 CC A5";
+
 	// Current box state, taken -- true; not taken -- false;
 	private String currentBoxState = "false";
 	
@@ -65,9 +65,7 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 		System.out.println("Bonjour " + user.getName() + ", c'est l'heure de prendre votre " + user.getPrescription());
 	}
 	
-	public void setMedicationRFID(String medId) {
-		currentId = medId;
-	}
+
 
 	@Override
 	public void eventNotifyReceived(String uuid, long seq, String varName, String value) {
@@ -81,7 +79,7 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 			value = value.split("_")[0];
 			System.out.println("value : " + value);
 			//judge if this user is the user we want
-			if (value.equals(currentId)) {
+			if (value.equals(user.getPrescriptionId())) {
 				System.out.println("Get the right user access box, try to change box state");
 				//change local box state
 				if (currentBoxState == "false") {
@@ -223,12 +221,18 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 		System.out.println("Tres bien vous avez gagne 1000 pts");
 		// TODO: update database new score
 		// Compute new score
-		// int newPoints = markUser.getPoints() + 1000;
-		// markUser.setPoints(newPoints);
+		int newPoints = user.getPoints() + 1000;
+		user.setPoints(newPoints);
+		try {
+			reqM.invokeCreate(new RequestWrapper("IoTF2B506Project","setPoints").add("User",user.getName()).add("Points", "1000").add("Reason","Medicament bien pris"));
+		} catch (ExecutionException_Exception | InterruptedException_Exception
+				| RequestInvocationException_Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		//ctrlPoint.saySomething("Tres bien " + user.getName() + ". Vous
 				// avez gagne " + newPoints + " points. A demain !");
-		//social.sendMedicationTookOnTime(markUser.getPrescription(),
-				//newPoints); 		
+		social.sendMedicationTookOnTime(user.getPrescription(),newPoints); 		
 	}
 	
 	private void setUserInformation() throws MalformedURLException, ExecutionException_Exception, InterruptedException_Exception, RequestInvocationException_Exception {
@@ -242,9 +246,13 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 		//ctrlPoint.setMedicationRFID(medId);
 		
 		ResultWrapper res = reqM.invokeRead(req.get(0));
-		user.setPrescription(res.toString());
+		user.setPrescription(res.getField("drug", 0).split("#")[1]);
+		user.setPoints(1000);
+		user.setPrescriptionId(res.getField("id", 0));
+		
+		
+		
 
 		res = reqM.invokeRead(req.get(1));
-		user.setPoints(Integer.parseInt(res.toString()));
-	}
+		}
 }
