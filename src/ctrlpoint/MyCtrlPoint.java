@@ -34,7 +34,8 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 	private Device limsiSpeech = null;	
 	// RFID reader
 	private Device rfidDev = null;
-	// Current user that we handle, all other user ids will be ignored
+	// Variable to store wrong box ID
+	private String badId;
 
 	// Current box state, taken -- true; not taken -- false;
 	private String currentBoxState = "false";
@@ -61,12 +62,9 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 		//while (!server.ctrlPoint.isLimsiSpeechready() || !server.ctrlPoint.isRFIDready()) {}
 
 		// Announce prescription
-		//server.ctrlPoint.saySomething(
-		//		"Bonjour " + server.user.getName() + ", c'est l'heure de prendre votre " + server.user.getPrescription());
+		//saySomething("Bonjour " + server.user.getName() + ", c'est l'heure de prendre votre " + server.user.getPrescription());
 		System.out.println("Bonjour " + user.getName() + ", c'est l'heure de prendre votre " + user.getPrescription());
 	}
-	
-
 
 	@Override
 	public void eventNotifyReceived(String uuid, long seq, String varName, String value) {
@@ -115,9 +113,19 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 					System.out.println("Error Desc = " + err.getDescription());
 				}
 			}
-			else 
-				//if not the correct user
-				System.out.println("Not the correct user, do not take action!");			
+			else {
+				// If not the correct box
+				if (badId != null && value.equals(badId)) {
+					System.out.println("Prenez maintenant votre " + user.getPrescription());
+					//saySomething("Prenez maintenant votre " + user.getPrescription());
+					badId = null;
+				}
+				else {
+					System.out.println("Ce n'est pas la bonne boite. Veuillez la reposer s'il vous plait.");
+					//saySomething("Ce n'est pas la bonne boite. Veuillez la reposer s'il vous plait.");
+					badId = value;
+				}
+			}
 		}
 	}
 
@@ -214,13 +222,13 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 	
 	private void boxTaken(){
 		System.out.println("La bonne boite a ete prise");	
-		// ctrlPoint.saySomething("C'est la bonne boite, vous pouvez prendre
+		// saySomething("C'est la bonne boite, vous pouvez prendre
 		// votre dose habituelle");
 	}
 
 	private void boxPutBack() {
 		System.out.println("Tres bien vous avez gagne 1000 pts");
-		// TODO: update database new score
+
 		// Compute new score
 		int newPoints = user.getPoints() + 1000;
 		user.setPoints(newPoints);
@@ -228,23 +236,19 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 			reqM.invokeCreate(new RequestWrapper("IoTF2B506Project","setPoints").add("User",user.getName()).add("Points", "1000").add("Reason","Medicament bien pris"));
 		} catch (ExecutionException_Exception | InterruptedException_Exception
 				| RequestInvocationException_Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		//ctrlPoint.saySomething("Tres bien " + user.getName() + ". Vous
-				// avez gagne " + newPoints + " points. A demain !");
+		//saySomething("Tres bien " + user.getName() + ". Vous avez gagne " + newPoints + " points. A demain !");
 		social.sendMedicationTookOnTime(user.getPrescription(),newPoints); 		
 	}
 	
+	// Execute SPARQL requests to retrieve user information
 	private void setUserInformation() throws MalformedURLException, ExecutionException_Exception, InterruptedException_Exception, RequestInvocationException_Exception {
-		// List of SPARQL requests
+
 		reqM = new RequestManager("http://192.168.223.129:8080/CrudService/CrudWS?WSDL");
 
-		List<RequestWrapper> req = new LinkedList<RequestWrapper>();
 		RequestInvocation req1 = new RequestWrapper("IoTF2B506Project", "getPrescriptions").add("User", "Mark");
 		RequestInvocation req2 = new RequestWrapper("IoTF2B506Project", "getPoints").add("User", "Mark");
-		// TODO: request to retrieve medication RFID
-		//ctrlPoint.setMedicationRFID(medId);
 		
 		ResultWrapper res = reqM.invokeRead(req1);
 		user.setPrescription(res.getField("drug", 0).split("#")[1]);
@@ -258,5 +262,5 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 		
 		user.setPoints(count);
 		
-		}
+	}
 }
