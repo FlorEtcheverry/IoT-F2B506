@@ -1,37 +1,81 @@
 package ctrlpoint;
 
+import application.*;
+import data.SocialData;
+import data.User;
+
+import java.net.MalformedURLException;
+import java.util.LinkedList;
+import java.util.List;
+
 import org.cybergarage.upnp.*;
 import org.cybergarage.upnp.device.*;
 import org.cybergarage.upnp.event.EventListener;
 import org.cybergarage.upnp.ssdp.SSDPPacket;
+import org.imt.atlantique.sss.kms.connectors.ws.ExecutionException_Exception;
+import org.imt.atlantique.sss.kms.connectors.ws.InterruptedException_Exception;
+import org.imt.atlantique.sss.kms.connectors.ws.RequestInvocationException_Exception;
+import org.jaatadia.soap_interaction.RequestManager;
+import org.jaatadia.soap_interaction.RequestWrapper;
+import org.jaatadia.soap_interaction.ResultWrapper;
+
+import appcomponent.Social;
 
 
 public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventListener {
 	
-	private Device limsiSpeech = null;
-	private String limsiSpeechUuid = null;
+	private SocialData sd;
+	private User user;
+	private Social social;
+	private RequestManager reqM;
 	
+	// LIMSI Speech device
+	private Device limsiSpeech = null;	
+	// RFID reader
 	private Device rfidDev = null;
-	//current user that we handle, all other user ids will be ignored
+	// Current user that we handle, all other user ids will be ignored
 	private String currentId = "E3 A1 CC A5";
-	//current box state, taken -- true; not taken -- false;
+	// Current box state, taken -- true; not taken -- false;
 	private String currentBoxState = "false";
 	
-	public MyCtrlPoint() {		
+	public MyCtrlPoint() throws MalformedURLException, ExecutionException_Exception, InterruptedException_Exception, RequestInvocationException_Exception {	
+		
+		sd = new SocialData("mark");
+		user = new User("Mark");
+		social = new Social();
+	
+		// Set Twitter account information
+		social.setAuthValues(sd.getConsumerKey(), sd.getconsumerSecret(), sd.getAccessToken(),
+				sd.getAccessTokenSecret());
+		
+		// Database requests
+		setUserInformation();
+		
 		addNotifyListener(this);
-		//add event listener in order to follow user state
+		// Add event listener in order to follow states
 		addEventListener(this);
 		start();
+		
+		// Wait until devices are ready
+		//while (!server.ctrlPoint.isLimsiSpeechready() || !server.ctrlPoint.isRFIDready()) {}
+
+		// Announce prescription
+		//server.ctrlPoint.saySomething(
+		//		"Bonjour " + server.user.getName() + ", c'est l'heure de prendre votre " + server.user.getPrescription());
+		System.out.println("Bonjour " + user.getName() + ", c'est l'heure de prendre votre " + user.getPrescription());
+	}
+	
+	public void setMedicationRFID(String medId) {
+		currentId = medId;
 	}
 
 	@Override
 	public void eventNotifyReceived(String uuid, long seq, String varName, String value) {
 		System.out.println("Event from: uuid " + uuid);
-
 		System.out.println("variable name : " + varName);
 		System.out.println("value : " + value);
 		
-		//when we receive a user state change from RFID device
+		// When we receive a user state change from RFID device
 		if ((varName == "rfidUserState") && (value != "")) {
 			//split to get only user id
 			value = value.split("_")[0];
@@ -40,10 +84,14 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 			if (value.equals(currentId)) {
 				System.out.println("Get the right user access box, try to change box state");
 				//change local box state
-				if (currentBoxState == "false")
+				if (currentBoxState == "false") {
 					currentBoxState = "true";
-				else
+					boxTaken();
+				}
+				else {
 					currentBoxState = "false";
+					boxPutBack();
+				}
 				//send an action control to RFID device to change the remote box state
 				Device rfidDev = this.getDevice("IoT_G2 RFID Device");
 				Action setBoxState = rfidDev.getAction("setState");
@@ -59,8 +107,7 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 						String name = outArg.getName();
 						String value1 = outArg.getValue();
 						System.out.println(name + value1);
-					}
-				
+					}				
 				}
 				//deal with errors
 				else {
@@ -71,12 +118,7 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 			}
 			else 
 				//if not the correct user
-				System.out.println("Not the correct user, do not take action!");
-			
-		}
-		
-		if (uuid.equals(limsiSpeechUuid)) {
-			
+				System.out.println("Not the correct user, do not take action!");			
 		}
 	}
 
@@ -95,24 +137,13 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 		for (int n = 0; n < nRootDevs; n++) {
 			Device dev = rootDevList.getDevice(n);
 			String devName = dev.getFriendlyName();
-			//System.out.println("[" + n + "] = " + devName);	
+			System.out.println("[" + n + "] = " + devName);	
+			
 			if (devName.equals("LIMSI Speech") && limsiSpeech == null) {				
-				limsiSpeech = dev;
-				
-				limsiSpeechUuid = limsiSpeech.getSSDPPacket().getUSN();
-				Service service = limsiSpeech.getService("urn:schemas-upnp-org:serviceId:1");
-				
-				if (service != null) {
-					boolean res = subscribe(service);
-					if (res) {
-						System.out.println("Subscribed");
-					} else {
-						System.out.println("Subscribe Failed");
-					}
-				}			
-				
-				saySomething("LIMSI Speech est prêt.");
+				limsiSpeech = dev;	
+				saySomething("LIMSI Speech is ready.");
 			}
+			
 			if (devName.equals("IoT_G2 RFID Device") && rfidDev == null) {				
 				rfidDev = dev;
 				
@@ -128,6 +159,7 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 				
 				saySomething("RFID is ready.");
 			}
+			
 			//printServices(dev);
 		}
 	}
@@ -158,7 +190,7 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 		}
 	}
 	
-	public void saySomething(String text) {				
+	private void saySomething(String text) {				
 		Action speechAct = limsiSpeech.getAction("Speak");
 		speechAct.setArgumentValue("Text", text);
 		speechAct.setArgumentValue("Tag", "Speech");
@@ -173,11 +205,46 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 		}
 	}
 	
-	public boolean isLimsiSpeechready() {
+	private boolean isLimsiSpeechready() {
 		return (limsiSpeech != null);
 	}
 	
-	public boolean isRFIDready() {
+	private boolean isRFIDready() {
 		return (rfidDev != null);
+	}
+	
+	private void boxTaken(){
+		System.out.println("La bonne boite a ete prise");	
+		// ctrlPoint.saySomething("C'est la bonne boite, vous pouvez prendre
+		// votre dose habituelle");
+	}
+
+	private void boxPutBack() {
+		System.out.println("Tres bien vous avez gagne 1000 pts");
+		// TODO: update database new score
+		// Compute new score
+		// int newPoints = markUser.getPoints() + 1000;
+		// markUser.setPoints(newPoints);
+		//ctrlPoint.saySomething("Tres bien " + user.getName() + ". Vous
+				// avez gagne " + newPoints + " points. A demain !");
+		//social.sendMedicationTookOnTime(markUser.getPrescription(),
+				//newPoints); 		
+	}
+	
+	private void setUserInformation() throws MalformedURLException, ExecutionException_Exception, InterruptedException_Exception, RequestInvocationException_Exception {
+		// List of SPARQL requests
+		reqM = new RequestManager("http://192.168.223.129:8080/CrudService/CrudWS?WSDL");
+
+		List<RequestWrapper> req = new LinkedList<RequestWrapper>();
+		req.add(new RequestWrapper("IoTF2B506Project", "getPrescriptions").add("User", "Mark"));
+		req.add(new RequestWrapper("IoTF2B506Project", "getPoints").add("User", "Mark"));
+		// TODO: request to retrieve medication RFID
+		//ctrlPoint.setMedicationRFID(medId);
+		
+		ResultWrapper res = reqM.invokeRead(req.get(0));
+		user.setPrescription(res.toString());
+
+		res = reqM.invokeRead(req.get(1));
+		user.setPoints(Integer.parseInt(res.toString()));
 	}
 }
