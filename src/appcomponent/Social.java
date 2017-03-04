@@ -11,6 +11,9 @@ public class Social {
 	private String consumerSecretStr;
 	private String accessTokenStr;
 	private String accessTokenSecretStr;
+	
+	private static int moreMaxErrorCode = 186;
+	private static int maxChars = 140;
 
 	public Social() {
 	}
@@ -55,8 +58,8 @@ public class Social {
 			return true;
 
 		} catch (TwitterException te) {
-			if (te.getErrorCode()==186) {
-				sendTweet(message.substring(0, 140));
+			if (te.getErrorCode()==moreMaxErrorCode) {
+				sendTweet(message.substring(0, maxChars));
 			}
 			System.err.println("Couldn't send Twitter update. "+te.getMessage());
 			te.printStackTrace();

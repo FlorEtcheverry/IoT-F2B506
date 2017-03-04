@@ -19,8 +19,8 @@ INSERT {
 	base:%%Prescription%% a :Prescription.
 	base:%%Prescription%% :hasMedicament base:%%Drug%%.
 	base:%%Prescription%% :hasDay "%%Day%%"^^xsd:string.
-	base:%%Prescription%% :hasHour "%%Hour%%"^^xsd:time.
-	base:%%Prescription%% :isActive "true"^^xsd:boolean.
+	base:%%Prescription%% :hasHour "%%Hour%%"^^xsd:string.
+	base:%%Prescription%% :isActive "true"^^xsd:string.
 }WHERE {
 	BIND ( NOW() as ?now )
 	BIND ( IRI(CONCAT("base:%%User%%-prescription-", STR(?now))) as ?pres)

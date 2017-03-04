@@ -1,5 +1,6 @@
 #File: createDrug -- [PLACEHOLDER]
 #Parameter: Drug -- [PLACEHOLDER] -- String -- M
+#Parameter: Id -- [PLACEHOLDER] -- String -- M
 
 PREFIX :<http://www.jaatadia.org/IMT/UV2B506Gr2.owl#>
 PREFIX base:<http://www.jaatadia.org/IMT/UV2B506Gr2.owl/Individuals#>
@@ -12,6 +13,7 @@ PREFIX foaf:<http://xmlns.com/foaf/0.1/>
 
 INSERT {
 	base:%%Drug%% a :Medicament.
+	base:%%Drug%% :hasId "%%Id%%"^^xsd:string.
 }WHERE {
 
 }
