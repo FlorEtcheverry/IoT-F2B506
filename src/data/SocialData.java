@@ -20,7 +20,8 @@ public class SocialData {
 	public SocialData(String name) {
 		try {
 			
-			reqM = new RequestManager("http://192.168.223.129:8080/CrudService/CrudWS?WSDL");
+			reqM = new RequestManager("http://10.77.5.107:8080/CrudService/CrudWS?WSDL");
+
 			
 			
 			RequestWrapper req = new RequestWrapper("IoTF2B506Project","getTwitterAccount")

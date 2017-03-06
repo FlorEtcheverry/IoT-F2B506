@@ -60,10 +60,6 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 		
 		// Wait until devices are ready
 		//while (!server.ctrlPoint.isLimsiSpeechready() || !server.ctrlPoint.isRFIDready()) {}
-
-		// Announce prescription
-		//saySomething("Bonjour " + server.user.getName() + ", c'est l'heure de prendre votre " + server.user.getPrescription());
-		System.out.println("Bonjour " + user.getName() + ", c'est l'heure de prendre votre " + user.getPrescription());
 	}
 
 	@Override
@@ -73,7 +69,7 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 		System.out.println("value : " + value);
 		
 		// When we receive a user state change from RFID device
-		if ((varName == "rfidState") && (value != "")) {
+		if ((varName == "rfidState") && (!value.equals("1_true"))) {
 			//split to get only user id
 			value = value.split("_")[0];
 			System.out.println("value : " + value);
@@ -117,12 +113,12 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 				// If not the correct box
 				if (badId != null && value.equals(badId)) {
 					System.out.println("Prenez maintenant votre " + user.getPrescription());
-					//saySomething("Prenez maintenant votre " + user.getPrescription());
+					saySomething("Prenez maintenant votre " + user.getPrescription());
 					badId = null;
 				}
 				else {
 					System.out.println("Ce n'est pas la bonne boite. Veuillez la reposer s'il vous plait.");
-					//saySomething("Ce n'est pas la bonne boite. Veuillez la reposer s'il vous plait.");
+					saySomething("Ce n'est pas la bonne boite. Veuillez la reposer s'il vous plait.");
 					badId = value;
 				}
 			}
@@ -144,11 +140,13 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 		for (int n = 0; n < nRootDevs; n++) {
 			Device dev = rootDevList.getDevice(n);
 			String devName = dev.getFriendlyName();
-			System.out.println("[" + n + "] = " + devName);	
+			//System.out.println("[" + n + "] = " + devName);	
 			
 			if (devName.equals("LIMSI Speech") && limsiSpeech == null) {				
 				limsiSpeech = dev;	
-				saySomething("LIMSI Speech is ready.");
+				// Announce prescription
+				saySomething("Bonjour " + user.getName() + ", c'est l'heure de prendre votre " + user.getPrescription());
+				System.out.println("Bonjour " + user.getName() + ", c'est l'heure de prendre votre " + user.getPrescription());
 			}
 			
 			if (devName.equals("IoT_G2 RFID Device") && rfidDev == null) {				
@@ -222,8 +220,7 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 	
 	private void boxTaken(){
 		System.out.println("La bonne boite a ete prise");	
-		// saySomething("C'est la bonne boite, vous pouvez prendre
-		// votre dose habituelle");
+		saySomething("C'est la bonne boite, vous pouvez prendre votre dose habituelle");
 	}
 
 	private void boxPutBack() {
@@ -238,14 +235,14 @@ public class MyCtrlPoint extends ControlPoint implements NotifyListener, EventLi
 				| RequestInvocationException_Exception e) {
 			e.printStackTrace();
 		}
-		//saySomething("Tres bien " + user.getName() + ". Vous avez gagne " + newPoints + " points. A demain !");
-		//social.sendMedicationTookOnTime(user.getPrescription(),newPoints); 		
+		saySomething("Très bien " + user.getName() + ". Vous avez gagné " + newPoints + " points. A demain !");
+		social.sendMedicationTookOnTime(user.getPrescription(),newPoints); 		
 	}
 	
 	// Execute SPARQL requests to retrieve user information
 	private void setUserInformation() throws MalformedURLException, ExecutionException_Exception, InterruptedException_Exception, RequestInvocationException_Exception {
 
-		reqM = new RequestManager("http://192.168.223.129:8080/CrudService/CrudWS?WSDL");
+		reqM = new RequestManager("http://10.77.5.107:8080/CrudService/CrudWS?WSDL");
 
 		RequestInvocation req1 = new RequestWrapper("IoTF2B506Project", "getPrescriptions").add("User", "Mark");
 		RequestInvocation req2 = new RequestWrapper("IoTF2B506Project", "getPoints").add("User", "Mark");
